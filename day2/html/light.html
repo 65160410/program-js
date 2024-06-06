@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #app {
+            text-align: center;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .circle {
+            margin-top: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="app">
+            <button @click="turnOn">{{ lightOn }}</button>
+            <button @click="turnOff">{{ lightOff }}</button>
+            <div class="circle" :style="{ backgroundColor: lightColor }"></div>
+        </div>
+
+        <script>
+        const { createApp, ref, computed } = Vue
+
+        createApp({
+            setup() {
+                const light = ref('off');
+
+                function turnOn() {
+                    light.value = 'on';
+                }
+
+                function turnOff() {
+                    light.value = 'off';
+                }
+
+                const lightColor = computed(() => {
+                    return light.value === 'on' ? 'green' : 'red';
+                });
+
+                return {
+                    lightOn: ref('Turn On'),
+                    lightOff: ref('Turn Off'),
+                    light,
+                    lightColor,
+                    turnOn,
+                    turnOff
+                }
+            }
+        }).mount('#app')
+    </script>
+    </body>
+</html>

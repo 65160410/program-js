@@ -2,24 +2,8 @@
 import { createVuetify } from 'vuetify'
 import 'vuetify/styles'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
-import { VApp, VAppBar, VBtn, VCard, VContainer, VFooter, VIcon, VLayout, VMain, VParallax, VRow, VSpacer, VToolbarTitle } from 'vuetify/components'
 
 const vuetify = createVuetify({
-  components: {
-    VApp,
-    VAppBar,
-    VBtn,
-    VCard,
-    VContainer,
-    VFooter,
-    VIcon,
-    VLayout,
-    VMain,
-    VParallax,
-    VRow,
-    VSpacer,
-    VToolbarTitle,
-  },
   icons: {
     defaultSet: 'mdi',
     aliases,

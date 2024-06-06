@@ -64,6 +64,11 @@
             color: #333;
             text-align: center;
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2em;
+        }
     </style>
     </head>
 
@@ -77,10 +82,13 @@
                 <li><a href="#live">ข้อมูลประสบณ์การชีวิต</a></li>
             </ul>
         </nav>
-        <input id="number1" type="number"> + <input id="number2" type="number">
+        <div class="button-container">
+            <input id="number1" type="number"> + <input id="number2"
+                type="number">
+            <button onclick="calculateSum()">Calculate Sum</button>
+            <h1 id="result"></h1>
+        </div>
 
-        <button onclick="calculateSum()">Calculate Sum</button>
-        <h1 id="result"></h1>
         <script>
         function calculateSum() {
             var inputNumber1 = parseFloat(document.getElementById('number1').value);

@@ -1,42 +1,49 @@
 <template>
-  <v-container class="about">
-    <v-row justify="center">
-      <v-col cols="12" md="8">
-        <v-card class="elevation-12" color="background">
-          <v-row no-gutters>
-            <v-col cols="12" md="4">
-              <v-img src="https://source.unsplash.com/random/400x400?face" height="100%"></v-img>
-            </v-col>
-            <v-col cols="12" md="8">
-              <v-card-title class="headline font-weight-bold primary--text">About Me</v-card-title>
-              <v-card-text>
-                <p>Hello, my name is [Your Name]. I am studying [Your Major] at [Your University]. I have a passion for [Your Interests or Hobbies].</p>
-                <p>Feel free to explore my projects and get in touch if you have any questions or opportunities.</p>
-              </v-card-text>
-            </v-col>
-          </v-row>
-        </v-card>
+  <v-app>
+    <v-app-bar app color="primary" dark>
+      <v-toolbar-title>Portfolio of นาย เสกสันต์ สุขเกษม</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn text to="#profile">Profile</v-btn>
+      <v-btn text to="#about">ข้อมูลส่วนต้ว</v-btn>
+      <v-btn text to="#work">ข้อมูลประสบณ์การทำงาน</v-btn>
+      <v-btn text to="#live">ข้อมูลประสบณ์การชีวิต</v-btn>
+    </v-app-bar>
+    <v-main>
+      <profile-section />
+      <about-section />
+      <work-section />
+      <life-section />
+    </v-main>
+    <v-footer app>
+      <v-col class="text-center white--text py-4" color="primary">
+        &copy; {{ new Date().getFullYear() }} Portfolio of นาย เสกสันต์ สุขเกษม
       </v-col>
-    </v-row>
-  </v-container>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
+import ProfileSection from './components/ProfileSection.vue'
+import About from './components/About.vue'
+import WorkSection from './components/WorkSection.vue'
+import LifeSection from './components/LifeSection.vue'
+
 export default {
-  name: 'About',
+  name: 'App',
+  components: {
+    About,
+  },
 }
 </script>
 
-<style scoped>
-.about {
-  margin-top: 50px;
+<style>
+.v-btn {
+  color: white;
+  font-weight: bold;
 }
 
-.v-card-title {
-  font-family: 'Georgia', serif;
-}
-
-.v-card-text {
-  font-family: 'Arial', sans-serif;
+.v-footer {
+  background-color: #4B0082;
+  color: white;
 }
 </style>
