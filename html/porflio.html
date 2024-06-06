@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio of นาย เสกสันต์ สุขเกษม</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap"
+            rel="stylesheet">
+        <style>
+                /* Importing the Kanit font */
+                @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+        
+                /* Style for the body */
+                body {
+                    font-family: 'Kanit', sans-serif;
+                    line-height: 1.6;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f4f4f4;
+                }
+        
+                /* Style for the navigation bar */
+                nav {
+                    background: #333;
+                    color: #fff;
+                    padding: 1em 0;
+                    position: fixed;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 1000;
+                }
+        
+                /* Adds padding to the body to prevent content from being hidden behind the fixed nav */
+                body {
+                    padding-top: 80px; /* Adjust this value according to the height of the nav */
+                }
+        
+                nav ul {
+                    list-style: none;
+                    padding: 0;
+                    text-align: center;
+                    margin: 0;
+                }
+        
+                nav ul li {
+                    display: inline;
+                    margin: 0 1em;
+                }
+        
+                nav ul li a {
+                    color: #000000;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+        
+                nav ul li a:hover {
+                    text-decoration: underline;
+                }
+        
+                /* General styles for sections */
+                section {
+                    padding: 2em;
+                    background: #fff;
+                    margin: 1em auto;
+                    max-width: 800px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+        
+                /* Container to center the content */
+                .container {
+                    width: 100%;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 0 1em;
+                }
+        
+                /* Header styles */
+                h1 {
+                    text-align: center;
+                    color: #ffffff;
+                    font-size: 1.5em;
+                    margin: 0;
+                }
+        
+                h2 {
+                    color: #333;
+                    font-size: 1.5em;
+                    margin-bottom: 1em;
+                }
+        
+                /* Style for lists */
+                ul {
+                    padding: 0;
+                    margin: 0;
+                }
+        
+                ul li {
+                    background: #e2e2e2;
+                    margin: 0.5em 0;
+                    padding: 0.5em;
+                    border-radius: 4px;
+                }
+        
+                /* Image style */
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                }
+        
+                /* Specific styles for the work section */
+                #work ul li {
+                    background: #cce7ff;
+                }
+        
+                /* Specific styles for the life section */
+                #live ul li {
+                    background: #c8f7c5;
+                }
+        
+                /* Style for the link to the add page */
+                a[target="_blank"] {
+                    color: #007BFF;
+                }
+        
+                a[target="_blank"]:hover {
+                    text-decoration: underline;
+                }
+            </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <h1>Porfolio of นาย เสกสันต์ สุขเกษม</h1>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#about">ข้อมูลส่วนต้ว</a></li>
+                <li><a href="#work">ข้อมูลประสบณ์การทำงาน</a></li>
+                <li><a href="#live">ข้อมูลประสบณ์การชีวิต</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <section id="profile">
+                <ul>
+                    <h2>Profile</h2>
+                    <img src="pexels-alina-rossoshanska-338724645-25225806.jpg"
+                        alt="Image" width="290">
+                </ul>
+            </section>
+            <div>
+                <ul>
+                    <li>echo : <a href="add.html" target="_blank">add</a></li>
+                </ul>
+                <ul>
+                    <li>counter : <a href="counter.html"
+                            target="_blank">counter</a></li>
+                </ul>
+                <ul>
+                    <li>งานบวกเลข : <a href="echo.html"
+                            target="_blank">echo</a></li>
+                </ul>
+            </div>
+            <section id="about">
+                <h2>ข้อมูลส่วนต้ว</h2>
+                <ul>
+                    <li>ชื่อ: นาย เสกสันต์ สุขเกษม</li>
+                    <li>วันเ/ดือน/ปีเกิด: 19/06/2003</li>
+                    <li>บ้านเลขที่: 11 หมู่ 6</li>
+                    <li>เบอร์โทร: 0970533906</li>
+                    <li>Email: 65160410@go.buu.ac.th</li>
+                </ul>
+            </section>
+
+            <section id="work">
+                <h2>ข้อมูลประสบณ์การทำงาน</h2>
+                <ul>
+                    <li>ข้อมูลส่วนตัว: นาย เสกสันต์ สุขเกษม</li>
+                    <li>วันเ/ดือน/ปีเกิด: 19/06/2003</li>
+                    <li>บ้านเลขที่: 11 หมู่ 6</li>
+                    <li>เบอร์โทร: 0970535906</li>
+                    <li>Email: 65160410@go.buu.ac.th</li>
+                    <li>ระวัติการศึกษา (Education): ปริญญาตรี</li>
+                    <li>ประสบการณ์การทำงาน: ดีเยี่ยมมาก</li>
+                    <li>ทักษะและความสามารถพิเศษ (Skills): หายใจได้ 20,000
+                        ครั้ง/วัน</li>
+                </ul>
+            </section>
+            <section id="live">
+                <h2>ข้อมูลประสบณ์การชีวิต</h2>
+                <ul>
+                    <li>กล้าที่จะเปลี่ยนแปลงตัวเองตลอดเวลา</li>
+                    <li>มีเป้าหมายในชีวิตที่ชัดเจน</li>
+                    <li>เผชิญหน้ากับความล้มเหลวแล้วเริ่มใหม่</li>
+                    <li>มุ่งมั่นในความคิดของตัวเองและทำจนกว่าจะสำเร็จ</li>
+                </ul>
+            </section>
+        </div>
+    </body>
+</html>

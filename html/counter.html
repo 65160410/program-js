@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,14 +35,7 @@
             font-weight: bold;
         }
 
-        /* Styling the input fields and button */
-        input[type="number"] {
-            padding: 8px;
-            margin: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
+        /* Styling the buttons */
         button {
             padding: 10px 20px;
             background-color: #007bff;
@@ -51,22 +43,22 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin: 10px;
+            justify-self: center;
         }
-
+        button 
         button:hover {
             background-color: #0056b3;
         }
 
         /* Styling the result */
         #result {
-            margin-top: 20px;
             font-size: 24px;
             color: #333;
             text-align: center;
         }
     </style>
     </head>
-
     <body>
         <nav>
             <h1>Portfolio of นาย เสกสันต์ สุขเกษม</h1>
@@ -77,19 +69,22 @@
                 <li><a href="#live">ข้อมูลประสบณ์การชีวิต</a></li>
             </ul>
         </nav>
-        <input id="number1" type="number"> + <input id="number2" type="number">
-
-        <button onclick="calculateSum()">Calculate Sum</button>
-        <h1 id="result"></h1>
+        <button id="add" onclick="calculate('add')">+</button>
+        <button id="subtract"
+            onclick="calculate('subtract')">-</button>
+        <h1 id="result">0</h1>
         <script>
-        function calculateSum() {
-            var inputNumber1 = parseFloat(document.getElementById('number1').value);
-            var inputNumber2 = parseFloat(document.getElementById('number2').value);
-            var sum = inputNumber1 + inputNumber2;
+        var currentValue = 0; // Initialize currentValue
 
-            document.getElementById('result').innerHTML = 'Sum: ' + sum;
+        function calculate(operation) {
+            if (operation === 'add') {
+                currentValue++;
+            } else if (operation === 'subtract') {
+                currentValue--;
+            }
+
+            document.getElementById('result').innerText = currentValue;
         }
     </script>
     </body>
-
 </html>
