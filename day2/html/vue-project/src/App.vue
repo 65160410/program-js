@@ -17,7 +17,8 @@
     </div>
   </div> -->
 
-    <totalsection></totalsection>
+    <!-- <totalsection></totalsection> -->
+    <usermanesger></usermanesger>
   </div>
 </template>
 
@@ -26,7 +27,8 @@
 // import AboutSection from './components/AboutSection.vue';
 // import WorkSection from './components/WorkSection.vue';
 // import LifeSection from './components/LifeSection.vue';
-import Totalsection from './components/Totalsection.vue';
+// import Totalsection from './components/Totalsection.vue';
+import Usermanesger from './components/Usermanesger.vue';
 </script>
 
 <style scoped>

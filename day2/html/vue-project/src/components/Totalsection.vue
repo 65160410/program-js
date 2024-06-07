@@ -48,7 +48,7 @@ function del(index) {
                 <button @click="del(index)">del</button>
 
             </li>
-            <!-- <li>Work2</li> -->
+
         </ul>
     </div>
 </template>
