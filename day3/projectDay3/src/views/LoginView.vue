@@ -1,63 +1,32 @@
 <script setup>
-import { useLoginStore } from '../stores/login.js';
-import { useUserStore } from '../stores/user.js'
-const userStore = useUserStore()
+import { useLoginStore } from '../stores/login.js'
+import CurrentLogin from '../components/CurrentLogin.vue'
 const loginStore = useLoginStore()
 </script>
-
 <template>
-    <div class="container">
-        <h1>User Management</h1>
+    <div>
+        <H1>LoginView</H1>
+        <CurrentLogin></CurrentLogin>
         <div v-if="loginStore.isLogin()">
             {{ loginStore.currentUser.login }} is login.
             <button @click="loginStore.logout">Logout</button>
         </div>
-        <button class="btn btn-primary" @click="userStore.addNew" v-if="!userStore.showForm">
-            Add New
-        </button>
-        <form @submit.prevent="userStore.handleSubmit" v-if="userStore.showForm" class="form">
+        <form @submit.prevent="loginStore.handleSubmit" class="form" v-if="!loginStore.isLogin()">
             <div class="form-group">
                 <label for="login">Login:</label>
-                <input type="text" id="login" v-model="userStore.form.login" required />
-            </div>
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" v-model="userStore.form.name" required />
+                <input type="text" id="login" v-model="loginStore.form.login" required />
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" v-model="userStore.form.password" required />
+                <input type="password" id="password" v-model="loginStore.form.password" required />
             </div>
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select id="gender" v-model="userStore.form.gender" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" v-model="userStore.form.age" required />
-            </div>
-            <button class="btn btn-success" type="submit">
-                {{ userStore.form.id === -1 ? 'Add' : 'Update' }}
-            </button>
-            <button class="btn btn-secondary" @click="userStore.cancel">Cancel</button>
+            <button class="btn btn-success" type="submit">Login</button>
+            <button class="btn btn-secondary" @click="loginStore.cancel">Cancel</button>
+            <div style="color: green" v-if="loginStore.message !== ''">{{ loginStore.message }}</div>
+            <div style="color: red" v-if="loginStore.error !== ''">{{ loginStore.error }}</div>
         </form>
-
-        <ul class="user-list">
-            <li v-for="item in userStore.users" :key="item.id" class="user-item">
-                {{ item.login }} - {{ item.name }} ({{ item.gender }}, {{ item.age }} years old)
-                <div class="user-item-actions">
-                    <button class="btn btn-info" @click="userStore.editUser(item)">Edit</button>
-                    <button class="btn btn-danger" @click="userStore.deleteUser(item.id)">Delete</button>
-                </div>
-            </li>
-        </ul>
     </div>
 </template>
-
 <style scoped>
 .container {
     max-width: 600px;

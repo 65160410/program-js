@@ -12,7 +12,9 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/user">User</RouterLink>
+        <RouterLink to="/login">login</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/Plus">Plus</RouterLink>
       </nav>
     </div>
   </header>
